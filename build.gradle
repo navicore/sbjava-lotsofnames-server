@@ -12,11 +12,20 @@ repositories {
 	mavenCentral()
 }
 dependencies {
+
+	implementation 'io.micrometer:micrometer-registry-prometheus:1.11.0'
 	implementation group: 'tech.navicore', name: 'lotsofnames_2.13', version: '3.0.6'
+  implementation 'org.springframework.boot:spring-boot-starter-actuator'
+  implementation 'org.springframework.boot:spring-boot-starter-aop'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+
+springBoot {
+    buildInfo()
 }
