@@ -1,4 +1,4 @@
-name: Java CI Release with Gradle
+name: Publish Snapshot Image
 
 on:
   push:
@@ -20,6 +20,9 @@ jobs:
         distribution: 'temurin'
     - name: Build Boot Jar
       run: ./gradlew bootJar
+    - name: Get the date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
     - name: Clean the branch name
       id: branch_name
       run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
