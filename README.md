@@ -32,3 +32,4 @@ Build a deployment in a docker image
 ```bash
 ./gradlew bootBuildImage --imageName=navicore/sbjava-lotsofnames-server:0.1.0
 ```
+
