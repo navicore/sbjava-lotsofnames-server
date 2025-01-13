@@ -13,7 +13,7 @@ repositories {
 }
 dependencies {
 
-	implementation 'io.micrometer:micrometer-registry-prometheus:1.14.2'
+	implementation 'io.micrometer:micrometer-registry-prometheus:1.14.3'
 	implementation group: 'tech.navicore', name: 'lotsofnames_2.13', version: '3.0.6'
   implementation 'org.springframework.boot:spring-boot-starter-actuator'
   implementation 'org.springframework.boot:spring-boot-starter-aop'
